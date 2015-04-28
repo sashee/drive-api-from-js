@@ -35,8 +35,21 @@
 <body>
 <div ng-controller="driveController">
 
+	<h2>What is it?</h2>
+	<p>This is a demonstration app for Google login and Drive. It is a sample that shows how to handle logging in with Google and how to store and link files in the user's Drive.</p>
+	<p>It uses AngularJS as the framework.</p>
 	<h2>How to use</h2>
-	<p>This demonstration app</p>
+	<p>At the Auth section, you can see whether you are logged in or not, and also you can log in. Logging in is done via Google auth.</p>
+	<p>At the Drive section, you can upload images to your drive account and see them below. The exact sequence of actions are:</p>
+	<ul>
+		<li>Creates a folder to store all files (or just checks that it exists and use that)</li>
+		<li>Inserts the file</li>
+		<li>Grant view permission to anyone and returns the links</li>
+	</ul>
+	<p><i>Note:</i> If you log in, then you should revoke access from this app at the <a href="https://security.google.com/settings/security/permissions">Account Permissions</a> page.
+		Also you should delete the <i>Drive API From JS Sample</i> directory from your <a href="https://drive.google.com/drive/u/0/my-drive">Drive</a>.
+	</p>
+
 
 	<h2>Auth section</h2>
 	<div ng-show="checkingLogin">Checking login status...</div>
