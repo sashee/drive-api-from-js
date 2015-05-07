@@ -14,10 +14,10 @@ angular.module('driveApp')
         }
 
         function ensureUploadFolderPresent(){
-            return gapi.client.drive.files.list().then(function(files){
-                var directory=files.result.items.filter(function(f){
-                    return f.mimeType==='application/vnd.google-apps.folder' && !f.labels.trashed;
-                });
+            return gapi.client.drive.files.list(
+                {q:"mimeType = 'application/vnd.google-apps.folder' and trashed = false"}
+            ).then(function(files){
+                var directory=files.result.items;
 
                 if(!directory.length){
                     return createFolder().then(function(res){
