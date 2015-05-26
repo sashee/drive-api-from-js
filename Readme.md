@@ -3,6 +3,11 @@
 This is a sample project that shows how one can use the Google authentication, and also how to store
 files in the user's Drive.
 
+For a more detailed description, check out these 2 blog posts:
+
+* [Using Google auth in Javascript](https://advancedweb.hu/2015/05/12/using-google-auth-in-javascript/)
+* [Accessing Google Drive in Javascript](https://advancedweb.hu/2015/05/26/accessing-google-drive-in-javascript/)
+
 ## Live demo
 
 For a live demo, see [this link](https://sashee.github.io/drive-api-from-js/)
